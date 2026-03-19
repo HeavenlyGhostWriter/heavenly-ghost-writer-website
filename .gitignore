@@ -1,11 +1,25 @@
 # Environment files
 .env
 .env.local
-.env.production
+.env.*.local
 
-# Node modules (if applicable)
-node_modules/
-
-# IDE files
+# IDE and editor files
 .vscode/
 .idea/
+node_modules/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Deployment ignore file (optional)
+.deployignore
+
+# SCSS files (if you compile them elsewhere)
+*.scss
+
+# Works folder - excluded from deployment
+Works/
+
+# README (remove this line if you want to track README.md)
+README.md

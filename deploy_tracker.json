@@ -1,10 +1,15 @@
 {
-    "index.html": 1773909789.9882066,
+    "index.html": 1773917879.128207,
     ".htaccess": 1773907731.3162065,
     ".gitignore": 1773908739.8802066,
     "deploy.py": 1773907741.3162065,
-    "deploy_tracker.json": 1773910546.4442067,
+    "deploy_tracker.json": 1773916432.912207,
+    "about.html": 1773918905.8322072,
+    "assets/css/remixicon.css": 1769685282.0,
     "assets/css/main.css": 1773907158.3802063,
+    "assets/css/remixicon.ttf": 1769685279.0,
+    "assets/css/remixicon.woff": 1769685279.0,
+    "assets/css/remixicon.woff2": 1769685282.0,
     "assets/fonts/Lora-Bold.ttf": 1773910268.9122066,
     "assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf": 1773910260.7482066,
     "assets/fonts/Lora-BoldItalic.ttf": 1773910277.5842066,
@@ -13,8 +18,8 @@
     "assets/fonts/Lora-Regular.ttf": 1773910335.2042067,
     "assets/fonts/Lora-SemiBoldItalic.ttf": 1773910345.8162067,
     "assets/fonts/Lora-SemiBold.ttf": 1773910373.3402066,
-    "pages/site-policy/terms.html": 1773916157.868207,
-    "pages/site-policy/privacy-policy.html": 1773915582.412207,
-    "pages/site-policy/disclaimer.html": 1773916032.972207,
-    "pages/site-policy/cookie-policy.html": 1773916205.536207
+    "pages/site-policy/terms.html": 1773917774.656207,
+    "pages/site-policy/privacy-policy.html": 1773917827.480207,
+    "pages/site-policy/disclaimer.html": 1773917743.568207,
+    "pages/site-policy/cookie-policy.html": 1773917770.784207
 }
