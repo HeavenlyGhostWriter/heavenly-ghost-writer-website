@@ -36,6 +36,7 @@ def load_env():
     return config
 
 # --- IGNORE SYSTEM ---
+
 def load_ignore_patterns():
     patterns = []
     if os.path.exists(".deployignore"):
@@ -44,9 +45,38 @@ def load_ignore_patterns():
     return patterns
 
 def should_ignore(path, patterns):
+    # Normalize path separators to ensure consistency across OS
+    path = os.path.normpath(path)
+    basename = os.path.basename(path)
+    
     for pattern in patterns:
-        if fnmatch.fnmatch(path, pattern) or fnmatch.fnmatch(os.path.basename(path), pattern):
-            return True
+        # Handle directory patterns (ending with /)
+        if pattern.endswith('/'):
+            dir_name = pattern.rstrip('/')
+            
+            # Case 1: The path IS the directory (e.g., path="Works", pattern="Works/")
+            if basename == dir_name:
+                return True
+            
+            # Case 2: The path is INSIDE the directory (e.g., path="Works/file.py")
+            # We check if the path starts with the directory name followed by a separator
+            # We use os.sep to handle Windows (\) vs Unix (/) correctly
+            if path.startswith(dir_name + os.sep) or path.startswith('./' + dir_name + os.sep):
+                return True
+                
+            # Edge case: Handle if the path is just the directory name without trailing slash in the variable
+            if path == dir_name:
+                return True
+
+        # Handle standard file/glob patterns (e.g., *.scss, .env)
+        else:
+            # Match against the full relative path (e.g., "src/styles/main.scss" vs "*.scss")
+            if fnmatch.fnmatch(path, pattern):
+                return True
+            # Match against the basename (e.g., "main.scss" vs "*.scss")
+            if fnmatch.fnmatch(basename, pattern):
+                return True
+                
     return False
 
 # --- MAIN DEPLOYER CLASS ---

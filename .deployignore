@@ -1,24 +1,8 @@
-# Environment files
+.git
+.vscode
 .env
-.env.local
-.env.*.local
-
-# IDE and editor files
-.vscode/
-.idea/
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-
-# Deployment ignore file (optional)
 .deployignore
-
-# SCSS files (if you compile them elsewhere)
+__pycache__
 *.scss
-
-# Works folder - excluded from deployment
 Works/
-
-# README (remove this line if you want to track README.md)
+README.md
