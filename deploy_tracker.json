@@ -3,7 +3,7 @@
     ".htaccess": 1773907731.3162065,
     ".gitignore": 1773908739.8802066,
     "deploy.py": 1773907741.3162065,
-    "deploy_tracker.json": 1773910206.7362065,
+    "deploy_tracker.json": 1773910546.4442067,
     "assets/css/main.css": 1773907158.3802063,
     "assets/fonts/Lora-Bold.ttf": 1773910268.9122066,
     "assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf": 1773910260.7482066,
@@ -12,5 +12,9 @@
     "assets/fonts/Lora-Medium.ttf": 1773910325.3842065,
     "assets/fonts/Lora-Regular.ttf": 1773910335.2042067,
     "assets/fonts/Lora-SemiBoldItalic.ttf": 1773910345.8162067,
-    "assets/fonts/Lora-SemiBold.ttf": 1773910373.3402066
+    "assets/fonts/Lora-SemiBold.ttf": 1773910373.3402066,
+    "pages/site-policy/terms.html": 1773916157.868207,
+    "pages/site-policy/privacy-policy.html": 1773915582.412207,
+    "pages/site-policy/disclaimer.html": 1773916032.972207,
+    "pages/site-policy/cookie-policy.html": 1773916205.536207
 }
