@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Heavenly Ghost Writer</title>
+
+    <meta
+      name="description"
+      content="A timeless, resilient personal archive of essays, photography, and audio built with pure HTML and CSS."
+    />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://your-domain.com/index.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Heavenly Ghost Writer" />
+    <meta property="og:url" content="https://your-domain.com/index.html" />
+    <meta property="og:title" content="Dashboard | Heavenly Ghost Writer" />
+    <meta
+      property="og:description"
+      content="A timeless, resilient personal archive of essays, photography, and audio built with pure HTML and CSS."
+    />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/assets/images/og-image.jpg"
+    />
+    <meta property="og:locale" content="en_PH" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yourhandle" />
+    <meta name="twitter:creator" content="@yourhandle" />
+    <meta name="twitter:title" content="Dashboard | Heavenly Ghost Writer" />
+    <meta
+      name="twitter:description"
+      content="A timeless, resilient personal archive of essays, photography, and audio built with pure HTML and CSS."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-domain.com/assets/images/twitter-image.jpg"
+    />
+
+    <meta name="theme-color" content="#fafaf9" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <input
+      type="checkbox"
+      id="mobile-menu-toggle"
+      class="toggle-checkbox"
+      aria-hidden="true"
+    />
+
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="header-content">
+          <h1 class="site-title">
+            <a href="index.html"><i class="ri-compass-3-line"></i> Heavenly Ghost Writer</a>
+          </h1>
+          <label
+            for="mobile-menu-toggle"
+            class="toggle-label"
+            aria-label="Toggle menu"
+          >
+            <i class="ri-menu-4-line"></i>
+          </label>
+        </div>
+      </header>
+
+      <div class="layout-container">
+        <aside class="sidebar">
+          <label
+            for="mobile-menu-toggle"
+            class="close-sidebar"
+            aria-label="Close menu"
+          >
+            <i class="ri-close-line"></i>
+          </label>
+
+          <div class="sidebar-profile">
+            <i class="ri-user-smile-line profile-icon"></i>
+            <h2>Welcome</h2>
+            <p>A resilient, multi-disciplinary archive.</p>
+          </div>
+
+          <nav class="sidebar-nav">
+            <h2><i class="ri-dashboard-line"></i> Hub</h2>
+            <ul>
+              <li>
+                <a href="index.html" class="active"
+                  ><i class="ri-layout-grid-line"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="ri-information-line"></i> About</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="sidebar-nav">
+            <h2><i class="ri-folder-open-line"></i> iDocs & Archives</h2>
+            <ul>
+              <li>
+                <a href="assets/data/manifesto.pdf" download
+                  ><i class="ri-file-pdf-2-line"></i> Manifesto (PDF)</a
+                >
+              </li>
+              <li>
+                <a href="assets/data/config.json" download
+                  ><i class="ri-file-code-line"></i> Config (JSON)</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="sidebar-nav">
+            <h2><i class="ri-shield-check-line"></i> Legal & Policies</h2>
+            <ul>
+              <li>
+                <a href="pages/site-policy/terms.html"
+                  ><i class="ri-article-line"></i> Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="pages/site-policy/privacy-policy.html"
+                  ><i class="ri-shield-keyhole-line"></i> Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="pages/site-policy/disclaimer.html"
+                  ><i class="ri-error-warning-line"></i> Disclaimer</a
+                >
+              </li>
+              <li>
+                <a href="pages/site-policy/cookie-policy.html"
+                  ><i class="ri-check-double-line"></i> Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <section class="dashboard-hero">
+            <h2>Explore the Archive</h2>
+            <p>
+              Select a discipline to dive into my dedicated collections of
+              writing, visual art, and audio recordings.
+            </p>
+          </section>
+
+          <section class="portal-grid">
+            <a href="blog-index.html" class="portal-card">
+              <div class="portal-icon"><i class="ri-quill-pen-line"></i></div>
+              <div class="portal-info">
+                <h3>Written Essays</h3>
+                <p>Deep dives into philosophy, tech, and life.</p>
+              </div>
+              <i class="ri-arrow-right-line portal-arrow"></i>
+            </a>
+
+            <a href="gallery-index.html" class="portal-card">
+              <div class="portal-icon"><i class="ri-camera-lens-line"></i></div>
+              <div class="portal-info">
+                <h3>Photography</h3>
+                <p>Visual stories and high-res photo galleries.</p>
+              </div>
+              <i class="ri-arrow-right-line portal-arrow"></i>
+            </a>
+
+            <a href="audio-index.html" class="portal-card">
+              <div class="portal-icon"><i class="ri-mic-2-line"></i></div>
+              <div class="portal-info">
+                <h3>Audio & Podcasts</h3>
+                <p>Spoken word, interviews, and sonic sketches.</p>
+              </div>
+              <i class="ri-arrow-right-line portal-arrow"></i>
+            </a>
+
+            <a href="videos-index.html" class="portal-card">
+              <div class="portal-icon"><i class="ri-film-line"></i></div>
+              <div class="portal-info">
+                <h3>Short Films</h3>
+                <p>Cinematic captures and video essays.</p>
+              </div>
+              <i class="ri-arrow-right-line portal-arrow"></i>
+            </a>
+          </section>
+
+          <section class="recent-activity">
+            <h3 class="section-heading">
+              <i class="ri-history-line"></i> Latest Additions
+            </h3>
+
+            <ul class="activity-list">
+              <li class="activity-item">
+                <div class="activity-meta">
+                  <span class="badge badge-text"
+                    ><i class="ri-quill-pen-fill"></i> Essay</span
+                  >
+                  <time>[Date]</time>
+                </div>
+                <a href="post-text.html" class="activity-title"
+                  >[Title] </a
+                >
+              </li>
+
+              <li class="activity-item">
+                <div class="activity-meta">
+                  <span class="badge badge-photo"
+                    ><i class="ri-camera-lens-fill"></i> Photo</span
+                  >
+                  <time>[Date]</time>
+                </div>
+                <a href="post-photo.html" class="activity-title"
+                  >[Title]</a
+                >
+              </li>
+
+              <li class="activity-item">
+                <div class="activity-meta">
+                  <span class="badge badge-audio"
+                    ><i class="ri-mic-2-fill"></i> Audio</span
+                  >
+                  <time>[Date] </time>
+                </div>
+                <a href="post-audio.html" class="activity-title"
+                  >[Title] </a
+                >
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Heavenly Ghost Writer. Built forever with native HTML & CSS.</p>
+      </footer>
+    </div>
+  </body>
+</html>
