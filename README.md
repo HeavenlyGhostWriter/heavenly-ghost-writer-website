@@ -16,4 +16,7 @@ In the past, I used Github Actions to automatically deploy my site changes and m
 **deploy.py** is my tool for online publication of my local website to online, it utilizes *FTP* and other built in Python3 tools, it was made by Gemini, it serve as replacement of GitHub Actions, it works well in Termux,  *deploy_tracker.json* its a part of 'deploy.py', it tracks what what uploaded  
 
 ## Plan In Feature
-- Turning My Website In PHP for dynamic rendering of footer and header
+- ~~Turning My Website In PHP for dynamic rendering of footer and header~~
+
+## Under Development
+- Iniating Turning to PHP
