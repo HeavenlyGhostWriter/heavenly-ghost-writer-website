@@ -1,0 +1,7 @@
+.git
+.vscode
+.env
+.deployignore
+__pycache__
+*.scss
+README.md

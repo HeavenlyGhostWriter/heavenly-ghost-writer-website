@@ -1,0 +1,85 @@
+# ==============================================================================
+# 1. DISABLE DIRECTORY BROWSING
+# Prevents visitors from seeing a raw list of files if an index.html is missing
+# ==============================================================================
+Options -Indexes
+
+# ==============================================================================
+# 2. FORCE HTTPS
+# Automatically redirects all unsecured HTTP traffic to secure HTTPS
+# ==============================================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ==============================================================================
+# 3. PROTECT SENSITIVE & HIDDEN FILES
+# Blocks access to any files or directories starting with a dot (like .git, .env)
+# ==============================================================================
+<IfModule mod_rewrite.c>
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+# ==============================================================================
+# 4. PREVENT CLICKJACKING (X-Frame-Options)
+# Stops other websites from embedding your site inside an iframe to steal clicks
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ==============================================================================
+# 5. MIME-TYPE SNIFFING PROTECTION
+# Forces the browser to strictly follow the MIME types declared by the server
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ==============================================================================
+# 6. STRICT TRANSPORT SECURITY (HSTS)
+# Forces browsers to only ever connect to your site via HTTPS for the next year
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ==============================================================================
+# 7. REFERRER POLICY
+# Protects user privacy by stripping referrer info when leaving your site
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ==============================================================================
+# 8. PERMISSIONS POLICY
+# Explicitly blocks the browser from asking for camera, mic, or location access
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ==============================================================================
+# 9. CONTENT SECURITY POLICY (CSP)
+# The ultimate shield. Dictates exactly where resources can be loaded from.
+# Configured specifically for your setup: 'self' and the Remixicons CDN.
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'self';"
+</IfModule>
+
+# ==============================================================================
+# 10. CACHE CONTROL FOR STATIC ASSETS (Optional but highly recommended)
+# Tells browsers to cache your CSS, JS, and images locally to prevent lag
+# ==============================================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType application/json "access plus 1 hour"
+</IfModule>
