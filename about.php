@@ -1,95 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="About the author, philosophy, and how to support this independent archive."
-    />
-    <title>About the Author | Heavenly Ghost Writer</title>
+<?php 
+// 1. Set your SEO variables for the main dashboard
+$pageTitle = "Dashboard | Heavenly Ghost Writer";
+$pageDesc = "A timeless, resilient personal archive of essays, photography, and audio built with pure HTML and CSS.";
 
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
-
-    <link
-      href="assets/css/remixicon.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <input
-      type="checkbox"
-      id="mobile-menu-toggle"
-      class="toggle-checkbox"
-      aria-hidden="true"
-    />
-
-    <div class="site-wrapper">
-      <header class="site-header">
-        <div class="header-content">
-          <h1 class="site-title">
-            <a href="index.html"><i class="ri-compass-3-line"></i> Heavenly Ghost Writer</a>
-          </h1>
-          <label for="mobile-menu-toggle" class="toggle-label"
-            ><i class="ri-menu-4-line"></i
-          ></label>
-        </div>
-      </header>
-
-      <div class="layout-container">
-        <aside class="sidebar">
-          <label for="mobile-menu-toggle" class="close-sidebar"
-            ><i class="ri-close-line"></i
-          ></label>
-
-          <nav class="sidebar-nav">
-            <h2><i class="ri-dashboard-line"></i> Hub</h2>
-            <ul>
-              <li>
-                <a href="index.html"
-                  ><i class="ri-layout-grid-line"></i> Dashboard</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="active"
-                  style="color: var(--color-accent); font-weight: 500"
-                  ><i class="ri-information-fill"></i> About</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <nav class="sidebar-nav">
-            <h2><i class="ri-price-tag-3-line"></i> Niches</h2>
-            <ul>
-              <li>
-                <a href="blog-index.html"
-                  ><i class="ri-quill-pen-line"></i> Written Essays</a
-                >
-              </li>
-              <li>
-                <a href="gallery-index.html"
-                  ><i class="ri-camera-lens-line"></i> Photography</a
-                >
-              </li>
-              <li>
-                <a href="audio-index.html"
-                  ><i class="ri-mic-2-line"></i> Audio & Podcasts</a
-                >
-              </li>
-              <li>
-                <a href="videos-index.html"
-                  ><i class="ri-film-line"></i> Short Films</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </aside>
+// 2. Load the Header and Sidebar
+include 'includes/header.php'; 
+?>
 
         <main class="main-content">
           <section class="about-intro-landscape text-content">
